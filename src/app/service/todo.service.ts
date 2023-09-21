@@ -13,4 +13,11 @@ export class TodoService {
   addTodo(title: string) {
     return this.firestoreCollection.add({title, isCompleted: false})
   }
+
+  updateStatus(id: string, newStatus: boolean) {
+    return this.firestoreCollection.doc(id).update({isCompleted:newStatus})
+  }
+  deleteTask(id: string) {
+    return this.firestoreCollection.doc(id).delete();
+  }
 }
