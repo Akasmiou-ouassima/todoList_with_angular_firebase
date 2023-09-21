@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "todoList_with_firebase": {
+    "todoList_with_angular_firebase": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -94,5 +94,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b6400b46-af5e-47c3-aac7-1e5b47e87fdf"
   }
 }
