@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -87,7 +88,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/light-theme.css",
+              "src/assets/dark-theme.css",
+              "src/assets/blue-theme.css",
+              "src/assets/green-theme.css"
             ],
             "scripts": []
           }

@@ -8,7 +8,7 @@ import {TodoService} from "../service/todo.service";
 })
 export class TodoComponent implements OnInit{
   todoList: any[] = [];
-
+  selectedTab: string = 'all';
   constructor(private todoService: TodoService) {
   }
  ngOnInit(): void {
@@ -31,5 +31,18 @@ export class TodoComponent implements OnInit{
 
   onDelete(id:string) {
     this.todoService.deleteTask(id);
+  }
+  selectTab(tab: string) {
+    this.selectedTab = tab;
+  }
+  get filteredTodoList() {
+    if (this.selectedTab === 'all') {
+      return this.todoList;
+    } else if (this.selectedTab === 'active') {
+      return this.todoList.filter(item => !item.isCompleted);
+    } else if (this.selectedTab === 'completed') {
+      return this.todoList.filter(item => item.isCompleted);
+    }
+    return [];
   }
 }
